@@ -167,9 +167,7 @@ ThemeData customTheme() {
     navigationBarTheme: const NavigationBarThemeData(
       backgroundColor: CustomColors.surface,
       indicatorColor: CustomColors.primaryLighten2,
-      labelTextStyle: WidgetStatePropertyAll(
-        CustomTypography.chipSecondary,
-      ),
+      labelTextStyle: WidgetStatePropertyAll(CustomTypography.chipSecondary),
       iconTheme: WidgetStatePropertyAll(
         IconThemeData(color: CustomColors.onSurfaceMuted),
       ),
