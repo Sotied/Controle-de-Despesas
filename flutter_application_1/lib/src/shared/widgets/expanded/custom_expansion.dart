@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/src/shared/theme/custom_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final randomJokeProvider = Provider((ref) {
@@ -21,16 +20,16 @@ class CustomExpansion extends StatelessWidget {
               return Text(
                 // "Novembro/2025",
                 randomJoke,
-                style: CustomTypography.subtitle.copyWith(
-                  color: CustomColors.blackLighten1,
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  color: Theme.of(context).colorScheme.onSurface,
                 ),
               );
             },
           ),
 
-          backgroundColor: CustomColors.whiteDarken1,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           dense: true,
-          collapsedBackgroundColor: CustomColors.whiteDarken1,
+          collapsedBackgroundColor: Theme.of(context).colorScheme.surface,
           collapsedShape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.circular(16),
           ),

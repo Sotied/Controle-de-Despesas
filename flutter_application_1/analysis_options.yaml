@@ -9,7 +9,15 @@
 # packages, and plugins designed to encourage good coding practices.
 analyzer:
   errors:
-    library_private_types_in_public_api: ignore ignore
+    library_private_types_in_public_api: ignore
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
 include: package:flutter_lints/flutter.yaml
 
 linter:

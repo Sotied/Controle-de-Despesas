@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/src/features/home_page/home_page.dart';
 import 'package:flutter_application_1/src/features/settings_page/settings_page.dart';
 import 'package:flutter_application_1/src/shared/providers/navigation/navigation_notifier.dart';
-import 'package:flutter_application_1/src/shared/theme/custom_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AppView extends ConsumerStatefulWidget {
@@ -29,19 +28,15 @@ class _AppViewState extends ConsumerState<AppView> {
       builder: (context, ref, _) {
         var state = ref.watch(navigationProvider);
         return Scaffold(
-          backgroundColor: CustomColors.whiteBase,
           appBar: AppBar(
             title: Text(
               state.page == 0 ? "Home" : "Configurações",
-              style: CustomTypography.body1.copyWith(
-                color: CustomColors.blackLighten1,
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                color: Theme.of(context).colorScheme.onSurface,
               ),
             ),
           ),
           bottomNavigationBar: NavigationBar(
-            backgroundColor: CustomColors.whiteBase,
-            indicatorColor: CustomColors.primaryBase,
-            shadowColor: CustomColors.blackBase,
             onDestinationSelected: (value) {
               ref.read(navigationProvider.notifier).pageChanged(value);
               _animateTo(value);

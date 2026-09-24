@@ -8,8 +8,11 @@ class $GastosTableTable extends GastosTable
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
+
   $GastosTableTable(this.attachedDatabase, [this._alias]);
+
   static const VerificationMeta _idMeta = const VerificationMeta('id');
+
   @override
   late final GeneratedColumn<int> id = GeneratedColumn<int>(
     'id',
@@ -22,9 +25,11 @@ class $GastosTableTable extends GastosTable
       'PRIMARY KEY AUTOINCREMENT',
     ),
   );
+
   static const VerificationMeta _descricaoMeta = const VerificationMeta(
     'descricao',
   );
+
   @override
   late final GeneratedColumn<String> descricao = GeneratedColumn<String>(
     'descricao',
@@ -37,7 +42,9 @@ class $GastosTableTable extends GastosTable
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+
   static const VerificationMeta _valorMeta = const VerificationMeta('valor');
+
   @override
   late final GeneratedColumn<String> valor = GeneratedColumn<String>(
     'valor',
@@ -46,7 +53,9 @@ class $GastosTableTable extends GastosTable
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+
   static const VerificationMeta _dataMeta = const VerificationMeta('data');
+
   @override
   late final GeneratedColumn<DateTime> data = GeneratedColumn<DateTime>(
     'data',
@@ -55,13 +64,18 @@ class $GastosTableTable extends GastosTable
     type: DriftSqlType.dateTime,
     requiredDuringInsert: true,
   );
+
   @override
   List<GeneratedColumn> get $columns => [id, descricao, valor, data];
+
   @override
   String get aliasedName => _alias ?? actualTableName;
+
   @override
   String get actualTableName => $name;
+
   static const String $name = 'gastos_table';
+
   @override
   VerificationContext validateIntegrity(
     Insertable<GastosTableData> instance, {
