@@ -89,6 +89,6 @@ Plano definido junto ao usuário; as tarefas serão executadas sob demanda (uma 
 - **T13 — Metas financeiras** ✅ (concluída): metas com valor e prazo; registrar progresso; exibir percentual e valor restante.
 
 ### Fase 4 — Análises e manutenção
-- **T14 — Relatórios**: gastos por categoria; evolução mensal; receitas x despesas; filtros por período e conta.
+- **T14 — Relatórios** ✅ (concluída): gastos por categoria; evolução mensal; receitas x despesas; filtros por período e conta.
 - **T15 — Configurações locais**: moeda e preferências; gerenciamento de categorias; exportação/importação de backup; validar backup antes de substituir dados.
 - **T16 — Qualidade e finalização**: testes de banco, repositórios, providers e widgets críticos; testes de migrations e cálculos financeiros; estados vazios, acessibilidade e responsividade; revisão geral contra o fluxo do SVG.

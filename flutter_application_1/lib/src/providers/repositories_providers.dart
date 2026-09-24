@@ -7,6 +7,7 @@ import 'package:flutter_application_1/src/repositories/categories_repository.dar
 import 'package:flutter_application_1/src/repositories/financial_entries_repository.dart';
 import 'package:flutter_application_1/src/repositories/goals_repository.dart';
 import 'package:flutter_application_1/src/repositories/recurring_entries_repository.dart';
+import 'package:flutter_application_1/src/repositories/reports_repository.dart';
 
 final accountsRepositoryProvider = Provider<AccountsRepository>((ref) {
   return AccountsRepository(ref.watch(appDatabaseProvider));
@@ -38,4 +39,8 @@ final budgetsRepositoryProvider = Provider<BudgetsRepository>((ref) {
 
 final goalsRepositoryProvider = Provider<GoalsRepository>((ref) {
   return GoalsRepository(ref.watch(appDatabaseProvider));
+});
+
+final reportsRepositoryProvider = Provider<ReportsRepository>((ref) {
+  return ReportsRepository(ref.watch(appDatabaseProvider));
 });
